@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 import classes from './NavBar.module.css';
 
 const links = [
@@ -33,11 +34,10 @@ export function NavBar() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-{        <MantineLogo size={28} />
-}        <Group gap={5} visibleFrom="xs">
+        <MantineLogo size={28} />
+        <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>
